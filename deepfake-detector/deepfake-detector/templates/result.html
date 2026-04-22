@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Result — DeepFake Detector</title>
+  <link rel="stylesheet" href="/static/css/style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;700;800&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body class="result-page">
+
+  <!-- NAV -->
+  <nav class="navbar">
+    <div class="nav-brand">
+      <a href="/" style="text-decoration:none; display:flex; align-items:center; gap:0.5rem;">
+        <span class="brand-icon">⬡</span>
+        <span class="brand-name">DeepFake<span class="accent">Detector</span></span>
+      </a>
+    </div>
+    <ul class="nav-links">
+      <li><a href="/">Home</a></li>
+      <li><a href="/upload">Analyze</a></li>
+    </ul>
+  </nav>
+
+  <main class="result-main">
+    <div class="result-container">
+
+      <!-- VERDICT BADGE -->
+      <div class="verdict-badge" id="verdictBadge">
+        <span class="verdict-icon" id="verdictIcon">?</span>
+        <span class="verdict-label" id="verdictLabel">Analyzing...</span>
+      </div>
+
+      <h1 class="result-title" id="resultTitle">—</h1>
+
+      <!-- CONFIDENCE METER -->
+      <div class="confidence-block">
+        <div class="confidence-label">
+          <span>Confidence</span>
+          <span class="confidence-pct" id="confidencePct">0%</span>
+        </div>
+        <div class="confidence-bar-outer">
+          <div class="confidence-bar-inner" id="confidenceBar" style="width:0%"></div>
+        </div>
+      </div>
+
+      <!-- VIDEO PREVIEW -->
+      <div class="video-preview-wrap">
+        <p class="preview-label">Analyzed Video Preview</p>
+        <video class="video-preview" id="videoPreview" controls>
+          <source src="" type="video/mp4" />
+          Your browser does not support video playback.
+        </video>
+      </div>
+
+      <!-- EXPLANATION -->
+      <div class="result-explanation" id="resultExplanation">
+        <!-- filled by JS -->
+      </div>
+
+      <!-- CTA -->
+      <a href="/upload" class="btn-primary btn-another">
+        <svg viewBox="0 0 24 24" width="18" height="18"><path fill="currentColor" d="M9 16h6v-6h4l-7-7-7 7h4zm-4 2h14v2H5z"/></svg>
+        <span>Analyze Another Video</span>
+      </a>
+
+    </div>
+  </main>
+
+  <footer class="footer">
+    <p>DeepFake Detector &mdash; Mini Project &mdash; Built with Flask + TensorFlow</p>
+  </footer>
+
+  <script src="/static/js/script.js"></script>
+</body>
+</html>

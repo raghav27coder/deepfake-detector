@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DeepFake Detector</title>
+  <link rel="stylesheet" href="/static/css/style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;700;800&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body class="home-page">
+
+  <!-- NAV -->
+  <nav class="navbar">
+    <div class="nav-brand">
+      <span class="brand-icon">⬡</span>
+      <span class="brand-name">DeepFake<span class="accent">Detector</span></span>
+    </div>
+    <ul class="nav-links">
+      <li><a href="/" class="active">Home</a></li>
+      <li><a href="/upload">Analyze</a></li>
+    </ul>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-bg-grid"></div>
+    <div class="hero-content">
+      <div class="hero-badge">AI-Powered Video Analysis</div>
+      <h1 class="hero-title">
+        Can You Trust<br/>What You <span class="glitch-text" data-text="See?">See?</span>
+      </h1>
+      <p class="hero-subtitle">
+        DeepFake Detector uses a convolutional neural network to analyze video frames
+        and determine whether a video has been synthetically manipulated.
+        Upload any video — get your answer in seconds.
+      </p>
+      <a href="/upload" class="btn-primary">
+        <span>Analyze a Video</span>
+        <svg viewBox="0 0 24 24" width="20" height="20"><path fill="currentColor" d="M13 4l-1.41 1.41L17.17 11H4v2h13.17l-5.58 5.59L13 20l8-8z"/></svg>
+      </a>
+    </div>
+    <div class="hero-visual">
+      <div class="scan-box">
+        <div class="scan-ring ring-1"></div>
+        <div class="scan-ring ring-2"></div>
+        <div class="scan-ring ring-3"></div>
+        <div class="scan-face">
+          <svg viewBox="0 0 100 100" width="80" height="80">
+            <circle cx="50" cy="40" r="20" fill="none" stroke="var(--accent)" stroke-width="2"/>
+            <path d="M20 85 Q50 65 80 85" fill="none" stroke="var(--accent)" stroke-width="2"/>
+            <circle cx="43" cy="37" r="3" fill="var(--accent)" opacity="0.8"/>
+            <circle cx="57" cy="37" r="3" fill="var(--accent)" opacity="0.8"/>
+            <path d="M44 45 Q50 49 56 45" fill="none" stroke="var(--accent)" stroke-width="1.5"/>
+          </svg>
+        </div>
+        <div class="scan-line"></div>
+        <div class="corner tl"></div>
+        <div class="corner tr"></div>
+        <div class="corner bl"></div>
+        <div class="corner br"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FEATURES -->
+  <section class="features">
+    <div class="features-grid">
+      <div class="feature-card">
+        <div class="feature-icon">🎞️</div>
+        <h3>Frame Extraction</h3>
+        <p>OpenCV samples key frames evenly across your video for thorough analysis.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">🧠</div>
+        <h3>CNN Analysis</h3>
+        <p>A trained convolutional neural network inspects visual artifacts and inconsistencies.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">📊</div>
+        <h3>Confidence Score</h3>
+        <p>Get a clear REAL / FAKE verdict with a percentage confidence rating.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <p>DeepFake Detector &mdash; Mini Project &mdash; Built with Flask + TensorFlow</p>
+  </footer>
+
+  <script src="/static/js/script.js"></script>
+</body>
+</html>
